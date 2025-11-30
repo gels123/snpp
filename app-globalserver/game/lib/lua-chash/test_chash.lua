@@ -1,0 +1,5 @@
+local chash = require ("chash")
+local hash = chash.mul_hash(122)
+print("====hash1===", hash)
+local hash = chash.fnv_hash("abcdefr")
+print("====hash2===", hash)

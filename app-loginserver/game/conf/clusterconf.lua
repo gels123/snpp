@@ -1,0 +1,6 @@
+my_node_game_1 = "127.0.0.1:2001"
+listen_my_node_game_1 = "0.0.0.0:2001"
+my_node_global = "127.0.0.1:2802"
+listen_my_node_global = "0.0.0.0:2802"
+my_node_login = "127.0.0.1:2801"
+listen_my_node_login = "0.0.0.0:2801"

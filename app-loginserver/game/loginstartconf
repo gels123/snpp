@@ -1,0 +1,64 @@
+root = "./"
+--设置lua路径
+path =
+	"./?.lua;" ..
+	"game/?.lua;" ..
+	"game/conf/?.lua;" ..
+	"game/service/?.lua;" ..
+	"game/service/testService/?.lua;" ..
+	"game/service/db/?.lua;" ..
+	"game/service/redis/?.lua;" ..
+	"game/service/mylogger/?.lua;" ..
+	"game/service/alertService/?.lua;" ..
+	"game/service/serverStart/?.lua;" ..
+	"game/service/webService/?.lua;" ..
+	"game/service/login/?.lua;" ..
+	"game/service/game/?.lua;" ..
+	"game/lib/?.lua;" ..
+	"game/lib/quickframework/?.lua;" ..
+	"game/lib/lua-json/?.lua;" ..
+	"game/lib/lua-lfs/?.lua;" ..
+	"game/lib/lua-zset/?.lua;" ..
+	"game/lib/lua-hmac_sha256/?.lua;" ..
+	"game/lib/lua-conhash/?.lua;" ..
+	"game/lib/lua-socket/?.lua;"
+
+
+
+--设置lua_cpath第三方库的路径
+third_path =
+    "game/lib/emmylua/?.so;" ..
+	"game/lib/lua-json/?.so;" ..
+	"game/lib/lua-encrypt/?.so;" ..
+	"game/lib/lua-crc32/?.so;" ..
+	"game/lib/lua-lfs/?.so;" ..
+	"game/lib/lua-curl/?.so;" ..
+	"game/lib/lua-zset/?.so;" ..
+	"game/lib/lua-redis/?.so;" ..
+	"game/lib/lua-zlib/?.so;" ..
+	"game/lib/lua-extra/?.so;" ..
+	"game/lib/lua-hmac_sha256/?.so;" ..
+	"game/lib/lua-snowflake/?.so;" ..
+	"game/lib/lua-maxminddb/?.so;" ..
+	"game/lib/lua-conhash/?.so;" ..
+	"game/lib/lua-socket/src/?.so;"
+
+
+
+--启动配置
+thread = 16
+logger = "myloggers"
+logservice = "snlua"
+logpath = "."
+harbor = 0
+start = "main"
+bootstrap = "snlua bootstrap"
+cpath = "./skynet/cservice/?.so"
+lua_path = "./skynet/lualib/?.lua;" .. "./skynet/lualib/compat10/?.lua;" .. "./skynet/examples/?.lua;" .. path
+lua_cpath = "./skynet/luaclib/?.so;" .. third_path
+lualoader = "./skynet/lualib/loader.lua"
+luaservice = "./skynet/service/?.lua;" .. path
+cluster = "./game/conf/clusterconf.lua"
+preload = "./game/preload.lua"
+-- snax = root.."examples/?.lua;"..root.."test/?.lua"
+-- daemon = "./skynet.pid"

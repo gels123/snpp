@@ -1,0 +1,6 @@
+*.so
+*.o
+.startsuccess_global
+.idea/
+/log
+/skynet.pid
